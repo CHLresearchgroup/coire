@@ -102,15 +102,16 @@ def compResList(lSystems):
 # takes only the first 20 residues from each results list
     lCombined = []
     for ls in lSystems:
-        for res in range(20):
-            if len(lCombined) > 0:
+        if len(lCombined) > 0:
+            for res in range(20):
                 check = 0
                 for x in range(len(lCombined)):
                     if (ls[res]['resid'] == lCombined[x]['resid']) & (ls[res]['segid'] == lCombined[x]['segid']):
                         check += 1
                 if check == 0:
                     lCombined.append(ls[res])
-            else:
+        else:
+            for res in range(20):
                 lCombined.append(ls[res])
     return lCombined
 
