@@ -2,8 +2,8 @@
 # 
 
 
-import MDAnalysis
-import MDAnalysis.lib.NeighborSearch as NSearch
+#import MDAnalysis
+#import MDAnalysis.lib.NeighborSearch as NSearch
 import numpy as np
 print("Packages imported")
    
